@@ -1,6 +1,6 @@
 package maratonajavadevdojo.String.test;
 
-public class StringPerfomanceTest {
+public class StringPerfomanceTest01 {
     public static void main(String[] args) {
         long inicio = System.currentTimeMillis();
         concatString(100000);
