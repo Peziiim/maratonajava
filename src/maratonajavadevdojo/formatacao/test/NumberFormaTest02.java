@@ -3,7 +3,7 @@ package maratonajavadevdojo.formatacao.test;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class NumberFormatTest01 {
+public class NumberFormaTest02 {
     public static void main(String[] args) {
         Locale lc = Locale.getDefault();
         Locale [] locale = new Locale[4];
@@ -13,15 +13,16 @@ public class NumberFormatTest01 {
         locale[3] = Locale.getDefault();
 
         NumberFormat [] numberFormat = new NumberFormat[4];
-        numberFormat[0] = NumberFormat.getNumberInstance(locale[2]);
-        numberFormat[1] = NumberFormat.getNumberInstance(locale[3]);
-        numberFormat[2] = NumberFormat.getNumberInstance(locale[1]);
-        numberFormat[3] = NumberFormat.getNumberInstance(locale[0]);
+        numberFormat[0] = NumberFormat.getCurrencyInstance(locale[0]);
+        numberFormat[1] = NumberFormat.getCurrencyInstance(locale[1]);
+        numberFormat[2] = NumberFormat.getCurrencyInstance(locale[2]);
+        numberFormat[3] = NumberFormat.getCurrencyInstance(locale[3]);
 
         double valor = 10_000.2130;
 
-        for(NumberFormat number: numberFormat){
-            System.out.println(number.format(valor));
+        for (int i = 0; i < numberFormat.length; i++) {
+            System.out.println(locale[i].getDisplayCountry() + ": " + numberFormat[i].format(valor));
+
         }
     }
 }
