@@ -11,7 +11,7 @@ public class StringTest56 {
         int x =  newArray[newArray.length / 2];
         int y =  newArray[(newArray.length / 2) - 1];
         double r = (double) (x + y) / 2;
-        System.out.println(r);;
+        System.out.println(r);
     }
 
 }
