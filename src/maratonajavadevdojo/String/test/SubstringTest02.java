@@ -28,6 +28,6 @@ public class SubstringTest02 {
 
             }
         }
-            return myFinalAnswerGuys;
+
     }
 }
