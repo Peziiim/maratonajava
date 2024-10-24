@@ -1,5 +1,7 @@
 package maratonajavadevdojo.colecoes.domain;
 
+import static sun.security.util.KnownOIDs.SerialNumber;
+
 public class Celular {
 private String serialNumber;
 private String branch;
@@ -16,6 +18,11 @@ private String branch;
         if(this.getClass() != obj.getClass()){return false;}
         Celular celular = (Celular) obj;
         return serialNumber != null && serialNumber.equals(celular.serialNumber);
+    }
+
+    @Override
+    public int hashCode() {
+       return serialNumber == null ? 0 : this.serialNumber.hashCode();
     }
 
     public String getBranch() {
